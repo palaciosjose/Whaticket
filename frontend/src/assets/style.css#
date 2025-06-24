@@ -1,0 +1,85 @@
+
+/* ========== BORDES SÚPER REDONDEADOS ELEGANTES ========== */
+
+/* Todas las tarjetas principales - MUY redondeadas */
+.MuiPaper-root, 
+.MuiCard-root,
+div[class*="MuiPaper"],
+div[class*="Card"] {
+    border-radius: 24px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: hidden !important;
+}
+
+/* Cards específicos de conexiones - EXTRA redondeados */
+div[class*="makeStyles-paper"],
+div[class*="paper"],
+.MuiGrid-item > div {
+    border-radius: 28px !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Hover effect elegante */
+.MuiPaper-root:hover, 
+.MuiCard-root:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 32px !important;
+}
+
+/* Botones súper redondeados */
+.MuiButton-root {
+    border-radius: 20px !important;
+    padding: 12px 24px !important;
+}
+
+/* Botones flotantes extra redondeados */
+.MuiButton-contained {
+    border-radius: 25px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Inputs muy redondeados */
+.MuiTextField-root .MuiOutlinedInput-root {
+    border-radius: 20px !important;
+}
+
+/* Modales súper elegantes */
+.MuiDialog-paper {
+    border-radius: 32px !important;
+    overflow: hidden !important;
+}
+
+/* Contenedores de la interfaz */
+.MuiContainer-root {
+    border-radius: 24px !important;
+}
+
+/* Chips muy redondeados */
+.MuiChip-root {
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+}
+
+/* Tablas con bordes súper elegantes */
+.MuiTableContainer-root {
+    border-radius: 24px !important;
+    overflow: hidden !important;
+}
+
+/* FlowBuilder nodes extra elegantes */
+.react-flow__node {
+    border-radius: 24px !important;
+}
+
+/* Específico para las tarjetas de conexiones */
+div[style*="border-radius"] {
+    border-radius: 28px !important;
+}
+
+/* Cualquier div que contenga tarjetas */
+div > div[class*="makeStyles"] {
+    border-radius: 24px !important;
+}

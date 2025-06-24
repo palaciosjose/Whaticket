@@ -1,0 +1,402 @@
+/* ============================================
+   WHATICKET PROFESSIONAL ROUNDED CARDS
+   Diseño de alto nivel con esquinas redondeadas
+   ============================================ */
+
+/* Variables CSS para consistencia */
+:root {
+  --card-border-radius: 16px;
+  --button-border-radius: 12px;
+  --input-border-radius: 10px;
+  --small-border-radius: 8px;
+  --shadow-elegant: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.15);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   TARJETAS PRINCIPALES - ALTO NIVEL
+   ============================================ */
+
+/* Todas las tarjetas Material-UI */
+.MuiCard-root,
+.MuiPaper-root {
+  border-radius: var(--card-border-radius) !important;
+  box-shadow: var(--shadow-elegant) !important;
+  transition: var(--transition-smooth) !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Efecto hover elegante para tarjetas */
+.MuiCard-root:hover,
+.MuiPaper-root:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* Tarjetas específicas del dashboard */
+.dashboard-card,
+[class*="card-"] {
+  border-radius: var(--card-border-radius) !important;
+  box-shadow: var(--shadow-elegant) !important;
+  transition: var(--transition-smooth) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   PANEL DE ATENCIONES - DISEÑO PREMIUM
+   ============================================ */
+
+/* Tarjetas del panel de atenciones */
+.connection-card,
+.ticket-card,
+.chat-card {
+  border-radius: var(--card-border-radius) !important;
+  box-shadow: var(--shadow-elegant) !important;
+  transition: var(--transition-smooth) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Contenedores de conexiones */
+.MuiGrid-container .MuiGrid-item {
+  padding: 8px !important;
+}
+
+.MuiGrid-container .MuiGrid-item > div {
+  border-radius: var(--card-border-radius) !important;
+  box-shadow: var(--shadow-elegant) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+/* ============================================
+   COMPONENTES DE INTERFAZ PREMIUM
+   ============================================ */
+
+/* Botones redondeados profesionales */
+.MuiButton-root {
+  border-radius: var(--button-border-radius) !important;
+  transition: var(--transition-smooth) !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Inputs y campos de formulario */
+.MuiTextField-root .MuiOutlinedInput-root,
+.MuiOutlinedInput-root {
+  border-radius: var(--input-border-radius) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover,
+.MuiOutlinedInput-root:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Selectores y dropdowns */
+.MuiSelect-root,
+.MuiAutocomplete-root .MuiOutlinedInput-root {
+  border-radius: var(--input-border-radius) !important;
+}
+
+/* ============================================
+   MODALES Y DIÁLOGOS ELEGANTES
+   ============================================ */
+
+/* Todos los modales */
+.MuiDialog-paper,
+.MuiPopover-paper,
+.MuiMenu-paper {
+  border-radius: var(--card-border-radius) !important;
+  box-shadow: var(--shadow-hover) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   LISTA DE TICKETS Y CONVERSACIONES
+   ============================================ */
+
+/* Items de lista de tickets */
+.MuiListItem-root,
+.ticket-list-item,
+.conversation-item {
+  border-radius: var(--small-border-radius) !important;
+  margin: 4px 8px !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.MuiListItem-root:hover,
+.ticket-list-item:hover,
+.conversation-item:hover {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  transform: translateX(4px) !important;
+}
+
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
+
+/* AppBar y header */
+.MuiAppBar-root {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Drawer lateral */
+.MuiDrawer-paper {
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0 !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* ============================================
+   CHIPS Y BADGES PROFESIONALES
+   ============================================ */
+
+/* Chips y etiquetas */
+.MuiChip-root,
+.status-badge,
+.queue-badge {
+  border-radius: 20px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.MuiChip-root:hover {
+  transform: scale(1.05) !important;
+}
+
+/* ============================================
+   AVATARES Y ELEMENTOS CIRCULARES
+   ============================================ */
+
+/* Avatares */
+.MuiAvatar-root {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.MuiAvatar-root:hover {
+  transform: scale(1.1) !important;
+}
+
+/* ============================================
+   TABLAS Y LISTAS PREMIUM
+   ============================================ */
+
+/* Encabezados de tabla */
+.MuiTableHead-root {
+  background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  border-radius: var(--small-border-radius) var(--small-border-radius) 0 0 !important;
+  font-weight: 700 !important;
+}
+
+/* Filas de tabla */
+.MuiTableRow-root {
+  transition: var(--transition-smooth) !important;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  transform: scale(1.01) !important;
+}
+
+/* ============================================
+   ANIMACIONES Y TRANSICIONES AVANZADAS
+   ============================================ */
+
+/* Animación de entrada para tarjetas */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiCard-root,
+.MuiPaper-root {
+  animation: cardFadeIn 0.6s ease-out !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN PROFESIONAL
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  :root {
+    --card-border-radius: 14px;
+    --button-border-radius: 10px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  :root {
+    --card-border-radius: 12px;
+    --button-border-radius: 8px;
+    --input-border-radius: 8px;
+  }
+  
+  .MuiCard-root:hover,
+  .MuiPaper-root:hover {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   MODO OSCURO COMPATIBLE
+   ============================================ */
+
+/* Ajustes para tema oscuro */
+.dark-theme .MuiCard-root,
+.dark-theme .MuiPaper-root {
+  background: rgba(30, 30, 30, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-theme .MuiCard-root:hover,
+.dark-theme .MuiPaper-root:hover {
+  background: rgba(40, 40, 40, 0.9) !important;
+}
+
+/* ============================================
+   EFECTOS GLASSMORPHISM PREMIUM
+   ============================================ */
+
+/* Efecto cristal para elementos principales */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ============================================
+   SCROLLBARS PERSONALIZADOS
+   ============================================ */
+
+/* Scrollbars elegantes */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: var(--transition-smooth);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a67d8 0%, #6b46c1 100%);
+}
+/* ============================================
+   AJUSTES ESPECÍFICOS PARA WHATICKET
+   ============================================ */
+
+/* Corregir botones de acciones en tickets */
+.MuiButton-containedPrimary,
+.MuiButton-containedSecondary,
+button[style*="background"] {
+    border-radius: 12px !important;
+    padding: 8px 16px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Mejorar lista de tickets */
+.MuiListItem-root {
+    border-radius: 12px !important;
+    margin: 4px 8px !important;
+    padding: 12px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Sidebar más elegante */
+.MuiDrawer-paper,
+nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Corregir header */
+.MuiAppBar-root {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Badges/chips más consistentes */
+.MuiChip-root,
+[class*="badge"],
+[class*="status"] {
+    border-radius: 16px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+/* Área de chat más elegante */
+.chat-container,
+[class*="message"] {
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Input de búsqueda */
+.MuiInputBase-root {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Corregir espaciado general */
+.MuiContainer-root,
+.main-content {
+    padding: 16px !important;
+    gap: 16px !important;
+}
+
+/* Iconos más suaves */
+.MuiSvgIcon-root {
+    transition: all 0.3s ease !important;
+}
+
+/* Hover mejorado en elementos */
+.MuiListItem-root:hover {
+    transform: translateX(4px) !important;
+    background: rgba(103, 126, 234, 0.05) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Video player más elegante */
+video {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+}

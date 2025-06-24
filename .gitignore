@@ -1,0 +1,59 @@
+# Archivos sensibles
+.env
+*.log
+*.backup*
+
+# Node modules
+node_modules/
+*/node_modules/
+
+# Build files
+dist/
+build/
+*/dist/
+*/build/
+
+# PM2
+.pm2/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Certificados
+*.pem
+*.key
+*.crt

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "50588234451@s.whatsapp.net",
+    "name": "New María Alejandra"
+  },
+  {
+    "id": "50578076598@s.whatsapp.net",
+    "name": "Cede Michael Malespin"
+  }
+]

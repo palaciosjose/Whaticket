@@ -1,0 +1,177 @@
+Generando reporte en: whaticket_diagnostico_20250528_154312.txt
+[0;36m[1/10] Verificando directorio raíz...[0m
+[0;32m✓ Estructura básica encontrada[0m
+[0;32m✓ Frontend package.json encontrado[0m
+=== INFORMACIÓN DEL FRONTEND ===
+  "name": "frontend",
+  "version": "5.0.0",
+    "react": "^16.13.1",
+[0;32m✓ Backend package.json encontrado[0m
+=== INFORMACIÓN DEL BACKEND ===
+  "name": "backend",
+  "version": "5.0.0",
+    "express": "^4.17.3",
+    "sequelize": "^5.22.3",
+
+[0;36m[2/10] Analizando estructura de traducciones...[0m
+[0;32m✓ Encontrado directorio de traducciones: frontend/src/translate[0m
+Archivos encontrados:
+frontend/src/translate/languages/en.js
+frontend/src/translate/languages/index.js
+frontend/src/translate/languages/tr.js
+frontend/src/translate/languages/es.js
+frontend/src/translate/languages/pt.js
+frontend/src/translate/languages/es_original_backup.js
+frontend/src/translate/i18n.js
+frontend/src/translate/languages/en.js
+frontend/src/translate/languages/index.js
+frontend/src/translate/languages/tr.js
+frontend/src/translate/languages/es.js
+frontend/src/translate/languages/pt.js
+
+[0;36m[3/10] Buscando componentes del FlowBuilder...[0m
+[0;32m✓ FlowBuilder encontrado en: frontend/src/pages/FlowBuilder[0m
+Archivos del FlowBuilder:
+frontend/src/pages/FlowBuilder/index.js
+Buscando referencias al FlowBuilder en código...
+frontend/src/routes/index.js
+frontend/src/pages/FlowBuilderConfig/index.js
+frontend/src/pages/FlowBuilder/index.js
+frontend/src/pages/FlowDefault/index.js
+frontend/src/pages/QueueIntegration/index.js
+
+[0;36m[4/10] Buscando textos en portugués que necesitan traducción...[0m
+Textos encontrados que necesitan traducción:
+[0;33m  'Conteúdo' encontrado en:[0m
+    frontend/src/pages/FlowBuilderConfig/index.js
+    frontend/src/pages/FlowBuilderConfig/nodes/singleBlockNode.js
+    frontend/src/components/TicketInfo/index.js
+[0;33m  'Menu' encontrado en:[0m
+    frontend/src/App.js
+    frontend/src/styles/styles.js
+    frontend/src/context/ActiveMenuContext/index.js
+[0;33m  'Randomizador' encontrado en:[0m
+    frontend/src/pages/FlowBuilderConfig/index.js
+    frontend/src/pages/FlowBuilderConfig/nodes/randomizerNode.js
+[0;33m  'Intervalo' encontrado en:[0m
+    frontend/src/pages/FlowBuilderConfig/index.js
+    frontend/src/pages/FlowBuilderConfig/nodes/intervalNode.js
+    frontend/src/pages/CampaignsConfig/index.js
+[0;33m  'Ticket' encontrado en:[0m
+    frontend/src/routes/index.js
+    frontend/src/context/Tickets/TicketsContext.js
+    frontend/src/hooks/useUserMoments/index.js
+[0;33m  'TypeBot' encontrado en:[0m
+    frontend/src/pages/FlowBuilderConfig/index.js
+    frontend/src/pages/FlowBuilderConfig/nodes/typebotNode.js
+[0;33m  'OpenAI' encontrado en:[0m
+    frontend/src/pages/FlowBuilderConfig/index.js
+    frontend/src/pages/FlowBuilderConfig/nodes/openaiNode.js
+    frontend/src/components/Settings/Options.js
+
+[0;36m[5/10] Verificando sistema de internacionalización...[0m
+Librerías de i18n instaladas:
+    "i18next": "^19.8.2",
+    "i18next-browser-languagedetector": "^6.0.1",
+Imports de i18n encontrados:
+import { i18n } from "../translate/i18n";
+import { i18n } from "../../translate/i18n";
+import { i18n } from "../../translate/i18n";
+import { i18n } from "../../translate/i18n";
+import { i18n } from "../../translate/i18n";
+
+[0;36m[6/10] Verificando configuración de rutas...[0m
+Rutas encontradas en frontend/src/routes/index.js:
+105:                  path="/flowbuilders"
+111:                  path="/flowbuilder/:id?"
+Rutas encontradas en frontend/src/pages/FlowBuilderConfig/index.js:
+437:          const { data } = await api.get(`/flowbuilder/flow/${id}`);
+514:      .post("/flowbuilder/flow", {
+Rutas encontradas en frontend/src/pages/FlowBuilder/index.js:
+153:          const { data } = await api.get("/flowbuilder");
+219:      await api.delete(`/flowbuilder/${webhookId}`).then(res => {
+231:      await api.post(`/flowbuilder/duplicate`, { flowId: flowId }).then(res => {
+Rutas encontradas en frontend/src/pages/CampaignsPhrase/index.js:
+129:      await api.delete(`/flowcampaign/${campaignId}`);
+140:    await api.get("/flowcampaign").then(res => {
+Rutas encontradas en frontend/src/pages/FlowDefault/index.js:
+144:    return await api.get("/flowbuilder").then(res => {
+152:    await api.get("/flowdefault").then(res => {
+218:      await api.delete(`/flowbuilder/${webhookId}`).then(res => {
+Rutas encontradas en frontend/src/pages/QueueIntegration/index.js:
+8:import flowbuilder from "../../assets/flowbuilders.png"
+320:          {integration.type === "flowbuilder" && (
+321:            <Avatar src={flowbuilder} className={classes.avatar} />
+Rutas encontradas en frontend/src/components/QueueIntegrationModal/index.js:
+158:      if (values.type === 'n8n' || values.type === 'webhook' || values.type === 'typebot' || values.type === "flowbuilder") values.projectName = values.name
+223:                          <MenuItem value="flowbuilder">Flowbuilder</MenuItem>
+337:                    {(values.type === "flowbuilder") && (
+Rutas encontradas en frontend/src/components/CampaignModalPhrase/index.js:
+107:    const flows = await api.get("/flowbuilder");
+115:    await api.get(`/flowcampaign/${FlowCampaignId}`).then(res => {
+216:      api.put("/flowcampaign", {
+Rutas encontradas en frontend/src/components/FlowBuilderAddAudioModal/index.js:
+152:        await api.post("/flowbuilder/audio", formData).then(res => {
+Rutas encontradas en frontend/src/components/CampaignsPhrase/index.js:
+129:      await api.delete(`/flowcampaign/${campaignId}`);
+140:    await api.get("/flowcampaign").then(res => {
+Rutas encontradas en frontend/src/components/WhatsAppModal/index.js:
+255:          const { data: flowDefault } = await api.get(`flowbuilder/${data.flowIdNotPhrase}`)
+261:          const { data: flowDefault } = await api.get(`flowbuilder/${data.flowIdWelcome}`)
+315:        const { data } = await api.get("/flowbuilder")
+Rutas encontradas en frontend/src/components/FlowBuilderModal/index.js:
+86:				await api.put("/flowbuilder", {
+98:			await api.post("/flowbuilder", {
+Rutas encontradas en frontend/src/components/FlowBuilderAddVideoModal/index.js:
+148:        await api.post("/flowbuilder/audio", formData).then(res => {
+Rutas encontradas en frontend/src/components/FlowBuilderSingleBlockModal/index.js:
+1052:          .post("/flowbuilder/content", formData)
+1125:          .post("/flowbuilder/content", formData)
+Rutas encontradas en frontend/src/components/FlowBuilderAddImgModal/index.js:
+149:        await api.post("/flowbuilder/img", formData).then(res => {
+Rutas encontradas en frontend/src/layout/MainListItems.js:
+303:    location.pathname.startsWith("/flowbuilders")
+562:               to="/flowbuilders"
+Rutas encontradas en frontend/src/translate/languages/es.js:
+505:      flowbuilderModal: {
+Rutas encontradas en frontend/src/translate/languages/pt.js:
+505:      flowbuilderModal: {
+Rutas encontradas en frontend/src/translate/languages/es_original_backup.js:
+505:      flowbuilderModal: {
+
+[0;36m[7/10] Analizando estructura React...[0m
+Tipo de componentes utilizados:
+  Hooks React: 0 referencias
+  Class Components: 0 referencias
+  Versión React:     "react": "^16.13.1",
+
+[0;36m[8/10] Verificando configuración de ambiente...[0m
+[0;32m✓ Archivo frontend/.env encontrado[0m
+Configuraciones relacionadas con idioma:
+  No se encontraron configuraciones de idioma
+[0;32m✓ Archivo backend/.env encontrado[0m
+Configuraciones relacionadas con idioma:
+  No se encontraron configuraciones de idioma
+
+[0;36m[9/10] Verificando configuración de base de datos...[0m
+Migraciones relacionadas con configuración:
+
+[0;36m[10/10] Generando recomendaciones...[0m
+[0;32m=== RECOMENDACIONES BASADAS EN TU INSTALACIÓN ===[0m
+[0;32m✓ Tu instalación ya tiene estructura de traducciones[0m
+  → Las traducciones que preparé son compatibles
+  → Puedes usar el script automatizado
+[0;33m⚠ FlowBuilder no detectado claramente[0m
+  → Verifica que la función esté habilitada
+[0;32m✓ Sistema i18n detectado[0m
+  → Usar enfoque con hooks de traducción
+
+[0;34m=== PRÓXIMOS PASOS RECOMENDADOS ===[0m
+1. Revisa el reporte generado: whaticket_diagnostico_20250528_154312.txt
+2. Haz backup de tu instalación actual
+3. Según el análisis, elige el método de implementación:
+   - Si tienes estructura i18n: Usar script automatizado
+   - Si no tienes i18n: Implementación manual paso a paso
+
+[0;32m¡Diagnóstico completado![0m
+Reporte guardado en: whaticket_diagnostico_20250528_154312.txt
